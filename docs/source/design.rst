@@ -63,8 +63,8 @@ These workers are compatible with Python 3.
 
 The worker `gthread` is a threaded worker. It accepts connections in the
 main loop, accepted connections are added to the thread pool as a
-connection job. On keepalive connections are put back in the loop
-waiting for an event. If no event happen after the keep alive timeout,
+connection job. ``Keep-Alive`` connections are put back in the loop
+waiting for an event. If no event occurs within the ``keep-alive`` timeout,
 the connection is closed.
 
 You can port also your application to use aiohttp_'s `web.Application`` API and use the
